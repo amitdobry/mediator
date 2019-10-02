@@ -1,0 +1,505 @@
+.box10 {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    text-align: center;
+  }
+
+  #myProgress {
+    width: 100%;
+    background-color: #ffd4f6;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: gray;
+  }
+  
+
+
+  body {background-color: rgb(195, 191, 231)}
+        
+            h2 {font-family:fantasy}
+        
+            .fontbox {
+font-family:'Alegreya', serif;}
+
+            .smaller-image {
+            width: 160px;
+            }
+
+            .smaller-image-handshake {
+            width: 120px;
+            height: 60px;            }
+        
+        .sentenceshorter {display: flex;
+        flex-direction: column}
+           
+
+            .image-place1 {padding-top: 0px}
+        
+         
+            
+        
+
+    .purp-text {
+    color: purple;
+    text-align: center
+}
+    .thick-green-border {
+    border-color: grey;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 35%;
+  }
+   .centerpic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+        
+            .thick-black-border {
+                border-color: black;
+            border-width: 5px;
+            border-style: ridge;
+            border-radius: 15%;
+            margin-top: 10%;
+         }
+        
+         
+         .thick-black-border-thinking {
+          border-color: black;
+      border-width: 5px;
+      border-style: ridge;
+      border-radius: 15%;
+      margin-top: 13.5%;
+   }
+
+         :hover.very-thick-black-border {
+                border-color: black;
+            border-width: 15px;
+            border-style: ridge;
+            border-radius: 15%;
+            margin-top: 10%;
+         }
+
+
+         .thick-black-border2 {
+                border-color: black;
+            border-width: 5px;
+            border-style: ridge;
+            border-radius: 15%;
+            margin-top: 3%;
+         }
+          
+         .thick-black-border-margin {
+          border-color: black;
+          border-width: 5px;
+          border-style: ridge;
+          border-radius: 15%;
+          margin-top: 20.5%;
+             }
+
+         
+             .text-left 
+             { width: 100%;}
+             .text-right 
+             { width: 100%;}
+        
+             .text-center {
+              display: flex;
+              justify-content: center
+            }
+
+            .hover2:hover {
+            background-color: gold;
+            color: blue;
+            border-color: gold;
+            border-width: 10px;
+            margin-top: 1%;
+
+          }
+
+          .hover3:hover {
+            background-color: gold;
+            color: blue;
+            border-color: gold;
+            border-width: 5px;
+            margin-top: 20.5%;
+
+          }
+
+          .hover4:hover {
+            background-color: gold;
+            color: blue;
+            border-color: gold;
+            border-width: 5px;
+            
+
+          }
+        
+        
+          .injected-text {
+            margin-bottom: 10px;
+            text-align: center;
+            padding-bottom: 0px;
+            padding-right: 0px;}
+            
+        
+          .yellow-box {
+            background-color: rgb(255, 255, 200);
+            padding: 0px;
+            margin: 25px;
+            height: 335px;
+        
+          }
+
+          .yellow-box-partI {
+            background-color: rgb(255, 255, 200);
+            padding: 0px;
+            margin: 25px;
+            height: 335px;
+        
+          }
+          
+          
+        
+          .red-box2 {
+            background-color: rgb(247, 175, 189);
+            color: red;
+            padding: 0.5em;
+            margin: 60px;
+          display: flex;
+            justify-content: left;}
+        
+            .red-box3 {
+                background-color: rgb(247, 175, 189);
+            color: red;
+            padding: 0.5em;
+            margin: 2px;
+          display: flex;
+            justify-content: flex-end;}
+
+            .recording-box-inner {
+              background-color: rgb(247, 175, 189);
+          color: red;
+          padding: 0.5em;
+          margin: 2px;
+        display: flex;
+          justify-content: flex-end;
+          border-style: solid;
+          border-color: black;
+          border-width: 3px;
+          text-align: center;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;}
+        
+          #record {
+            border-radius: 50%;
+            max-width:50%;
+            max-height: 15%;
+            background-color: red;
+          }
+          
+          .blue-box3 {
+        
+            background-color: rgb(187, 187, 247);
+            color: blue;
+            margin-left: 0px;
+            margin-top: 2px;
+            margin-bottom: 20px;
+            margin-right: 2px;
+          }
+        
+          .blue-box2 {
+        
+            background-color: rgb(187, 187, 247);
+        color: blue;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        margin-right: 0px;
+        }
+        
+        #box-container {
+            display: flex;
+            height: 500px;
+            
+          }
+        
+          #box-container2 {
+            display: flex;
+            height: 200px;
+            justify-content: center}
+        
+            #box-container3 {
+            display: flex;
+            height: 80px;
+            justify-content: center
+            
+          }
+          #box-1 {
+            background-color: rgb(255, 205, 253);
+            width: 50%;
+            height: 100%;
+            
+          }
+        
+        
+          .img {
+            width: 110px;
+        }
+
+        .smallerimage {width: 120px; height: 200px;}
+
+        
+        #a,#b {
+            float: left;
+            padding: 0.2em;
+            margin-left: 5px;
+        }
+          
+        #a {
+          margin-left: 77px;
+        border: 3px solid #000;
+        }
+        img.second {
+            display: none;
+        }
+        
+        #a:hover + #b img.first {
+            display: none;
+        }
+        #a:hover + #b img.second {
+            display: inline-block;
+        }
+
+         
+        #a2,#b2 {
+          float: left;
+          padding: 0.2em;
+          margin-left: 5px;
+      }
+        
+      #a2 {
+        margin-left: 77px;
+      border: 3px solid #000;
+      }
+      img.second {
+          display: none;
+      }
+      
+      #a2:hover + #b2 img.first {
+          display: none;
+      }
+      #a2:hover + #b2 img.second {
+          display: inline-block;
+      }
+
+
+        .card {
+          width: 175px;
+          height: 98px;
+          background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStrN38i607mOySeTpKnz7cRmGwSgZxL6aA8X6eHND80sqQBKmM") no-repeat;
+          background-size: 100%;
+          display: inline-block;
+                  border-color: black;
+              border-width: 5px;
+              border-style: ridge;
+              border-radius: 15%;
+              margin-top: 10%;
+              text-align: center;
+              object-fit: contain;
+      }
+      .card:hover {
+          background: url("https://philmckinney.com/wp-content/uploads/2013/05/new_ideas-1024x976.jpg") no-repeat;
+      background-size: 100%;
+      border-color: gold;
+      height: 168px;
+      }        
+        
+      .earcard {
+        width: 150px;
+        height: 165px;
+        background: url("https://clipartstation.com/wp-content/uploads/2018/10/not-listening-clipart.png") no-repeat;
+        background-size: 100%;
+        display: inline-block;
+                border-color: black;
+            border-width: 5px;
+            border-style: ridge;
+            border-radius: 15%;
+            margin-top: 10%;
+            text-align: center;
+            object-fit: contain;
+    }
+    .earcard:hover {
+        background: url("https://image.shutterstock.com/image-vector/vector-illustration-ear-on-white-260nw-1161038935.jpg") no-repeat;
+    background-size: 100%
+    }
+        
+            .smaller-image-ear {
+            width: 190px;
+            }
+
+
+            .very-smaller-image {
+            width: 120px;
+            height: 240px;
+            }
+
+        
+            .thick-black-border-yellow-traffic {
+              border-color: black;
+          border-width: 5px;
+          border-style: ridge;
+          border-radius: 15%;
+          margin-top: 2.5%;
+       }
+      
+         :hover.very-thick-black-border {
+                border-color: black;
+            border-width: 15px;
+            border-style: ridge;
+            border-radius: 15%;
+            margin-top: 10%;
+         }
+
+            .hover2:hover {
+            background-color: gold;
+            color: blue;
+            border-color: gold;
+            border-width: 10px;
+            margin-top: 1%;
+
+          }
+
+          .hover:hover {
+            background-color: gold;
+            color: blue;
+          }
+        
+            .box {
+              border-style: solid;
+              border-color: black;
+              border-width: 3px;
+              text-align: center;
+            }
+
+            #recording-box {
+              border-style: solid;
+              border-color: black;
+              border-width: 3px;
+              text-align: center;
+                background-color: rgb(187, 187, 247);
+                color: black;
+                margin-left: 0px;
+                margin-top: 1.5px;
+                margin-bottom: 20px;
+                margin-right: 1px;  
+                margin-left: 1px; 
+            }
+        
+          .yellow-box {
+            background-color: rgb(255, 255, 200);
+            padding: 0px;
+            margin: 25px;
+            height: 275px;
+        
+          }
+          
+    
+          .blue-box {
+        
+            background-color: rgb(187, 187, 247);
+            color: blue;
+            margin-left: 0px;
+            margin-top: 1.5px;
+            margin-bottom: 20px;
+            margin-right: 1px;  
+            margin-left: 1px;
+          }
+        
+        
+          #box-container2 {
+            display: flex;
+            height: 200px;
+            justify-content: center}
+        
+          #box-2 {
+            background-color: #ffd4f6;
+            width: 50%;
+            height: 100%;
+            text-align: center
+          }
+        
+
+
+ :hover.very-thick-black-border {
+        border-color: black;
+    border-width: 15px;
+    border-style: ridge;
+    border-radius: 15%;
+    margin-top: 10%;
+ }
+
+
+    .hover2:hover {
+    background-color: gold;
+    color: blue;
+    border-color: gold;
+    border-width: 10px;
+    margin-top: 1%;
+
+  }
+
+  
+  .red-box {
+    background-color: snow;
+    color: lightcyan;
+    padding: 02px;
+    margin: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  #box-container2 {
+    display: flex;
+    height: 200px;
+    justify-content: center}
+
+
+
+  .notice {
+    width:100%;
+    height: 50px;
+    position: flex;
+    justify-content: center;
+    z-index: 1;
+    background: lightseagreen;
+    text-align: center;
+    }
+
+  .notice p {text-decoration: none;
+  font-size: 10px;
+  text-transform:uppercase;
+  letter-spacing: 20px;
+  padding-top: 6px;
+}  
+
+.popup-overlay {
+  visibility:hidden;
+  }
+  
+  .popup-content {
+  visibility:hidden;
+  }
+
+  .popup-overlay.active{
+    visibility:visible;
+    }
+    
+    .popup-content.active {
+    visibility:visible;
+    }
