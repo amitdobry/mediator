@@ -1,0 +1,80 @@
+.smaller-image {
+    width: 160px;
+}
+
+.purp-text {
+    color: purple;
+    text-align: center
+}
+
+.thick-green-border {
+    border-color: grey;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 35%;
+}
+
+body {
+    background-color: rgb(242, 210, 255)
+}
+
+h1 {
+    color: black;
+    font-family: 'Alegreya', serif;
+}
+
+h2 {
+    font-family: 'Alegreya', serif;
+}
+
+.tital {
+    font-size: 40px;
+    font-family: 'Alegreya', serif;
+}
+
+.silver-background {
+    background-color: silver;
+}
+
+.purp-text {
+    color: purple;
+    text-align: center
+}
+
+.purp-text2 {
+    color: purple;
+}
+
+.center {
+    display: flex;
+    height: px;
+    justify-content: center
+}
+
+.center2 {
+    display: flex;
+    height: 60px;
+    justify-content: center
+}
+
+.centerpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.downabit {
+    height: 50px;
+}
+
+.downabit2 {
+    height: 40px;
+}
+
+.hover3:hover {
+    background-color: silver;
+    color: purple;
+    border-color: silver;
+    border-width: 10px;
+    margin-top: 1%;
+}

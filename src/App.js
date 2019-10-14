@@ -1,14 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { render } from "react-dom";
 import './App.css';
-import MyComponent from '../src/components1/component2';
+import MyComponent2 from '../src/components1/component2';
+import MyComponent3 from '../src/components1/component3';
+import {Header} from '../src/components1/Header';
+import {Home} from '../src/components1/Home';
+
+
+
+// import '../public/css/mystyle.css'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <MyComponent/>
+
+        <Header />
+        <Home />
+        <MyComponent2 />
+        <MyComponent3 />
+
+        }
+
+        <a href="C:\Users\user\Desktop\papooo\Mediator papoo page 2.html" class="hover3 center">proceed and Meet Smart Eliezer Papo.</a>
+
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -26,3 +41,4 @@ function App() {
 }
 
 export default App;
+

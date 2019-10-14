@@ -40,7 +40,29 @@ font-family:'Alegreya', serif;}
             .image-place1 {padding-top: 0px}
         
          
+     
+h3 {font-family:'Alegreya', serif;}
+        
+        
+.hover2:hover {
+  background-color: gold;
+  color: blue;
+  border-color: gold;
+  border-width: 10px;
+  margin-top: 1%;
+  }
+        
+.injected-text {
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 0px;
+  padding-right: 0px;}
             
+#box-container2 {
+  display: flex;
+  height: 200px;
+  justify-content: center}
+   
         
 
     .purp-text {
