@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import '../components1/myIntroStyle.css'
+import './myIntroStyle.css'
 
 class MyComponent3 extends React.Component {
     render() {

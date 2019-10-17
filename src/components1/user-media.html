@@ -1,0 +1,200 @@
+
+<script src="https://gist.github.com/prof3ssorSt3v3/48621be79794a8a3adeed7971786d4d8.js"></script>
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MediaCapture and Streams API</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>MediaCapture, MediaRecorder and Streams API</h1>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit molestiae itaque facere totam saepe tempore esse temporibus, quae reprehenderit aliquid iusto ea laborum, iure eligendi odio exercitationem sapiente illum quos.</p>
+        
+        <p><button id="btnStart">START RECORDING</button><br/>
+        <button id="btnStop">STOP RECORDING</button></p>
+        
+        <video controls></video>
+        
+        <video id="vid2" controls></video>
+        
+        <!-- could save to canvas and do image manipulation and saving too -->
+    </main>    
+    <script>
+        
+        let constraintObj = { 
+            audio: false, 
+            video: { 
+                facingMode: "user", 
+                width: { min: 640, ideal: 1280, max: 1920 },
+                height: { min: 480, ideal: 720, max: 1080 } 
+            } 
+        }; 
+        // width: 1280, height: 720  -- preference only
+        // facingMode: {exact: "user"}
+        // facingMode: "environment"
+        
+        //handle older browsers that might implement getUserMedia in some way
+        if (navigator.mediaDevices === undefined) {
+            navigator.mediaDevices = {};
+            navigator.mediaDevices.getUserMedia = function(constraintObj) {
+                let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+                if (!getUserMedia) {
+                    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+                }
+                return new Promise(function(resolve, reject) {
+                    getUserMedia.call(navigator, constraintObj, resolve, reject);
+                });
+            }
+        }else{
+            navigator.mediaDevices.enumerateDevices()
+            .then(devices => {
+                devices.forEach(device=>{
+                    console.log(device.kind.toUpperCase(), device.label);
+                    //, device.deviceId
+                })
+            })
+            .catch(err=>{
+                console.log(err.name, err.message);
+            })
+        }
+        navigator.mediaDevices.getUserMedia(constraintObj)
+        .then(function(mediaStreamObj) {
+            //connect the media stream to the first video element
+            let video = document.querySelector('video');
+            if ("srcObject" in video) {
+                video.srcObject = mediaStreamObj;
+            } else {
+                //old version
+                video.src = window.URL.createObjectURL(mediaStreamObj);
+            }
+            
+            video.onloadedmetadata = function(ev) {
+                //show in the video element what is being captured by the webcam
+                video.play();
+            };
+            
+            //add listeners for saving video/audio
+            let start = document.getElementById('btnStart');
+            let stop = document.getElementById('btnStop');
+            let vidSave = document.getElementById('vid2');
+            let mediaRecorder = new MediaRecorder(mediaStreamObj);
+            let chunks = [];
+            
+            start.addEventListener('click', (ev)=>{
+                mediaRecorder.start();
+                console.log(mediaRecorder.state);
+            })
+            stop.addEventListener('click', (ev)=>{
+                mediaRecorder.stop();
+                console.log(mediaRecorder.state);
+            });
+            mediaRecorder.ondataavailable = function(ev) {
+                chunks.push(ev.data);
+            }
+            mediaRecorder.onstop = (ev)=>{
+                let blob = new Blob(chunks, { 'type' : 'video/mp4;' });
+                chunks = [];
+                let videoURL = window.URL.createObjectURL(blob);
+                vidSave.src = videoURL;
+            }
+        })
+        .catch(function(err) { 
+            console.log(err.name, err.message); 
+        });
+        
+        /*********************************
+        getUserMedia returns a Promise
+        resolve - returns a MediaStream Object
+        reject returns one of the following errors
+        AbortError - generic unknown cause
+        NotAllowedError (SecurityError) - user rejected permissions
+        NotFoundError - missing media track
+        NotReadableError - user permissions given but hardware/OS error
+        OverconstrainedError - constraint video settings preventing
+        TypeError - audio: false, video: false
+        *********************************/
+    </script>
+</body>
+</html>
+@Rajarathinamsoft
+Rajarathinamsoft commented on Jun 5
+Is working fine on Chrome but not support Internet Explorer, Microsoft Edge, Safari, Mozhilla please advise what do the changes to work all browser
+
+@prof3ssorSt3v3
+Owner
+Author
+prof3ssorSt3v3 commented on Jun 5
+It will never be supported on IE. There are limitations with iOS too.
+https://caniuse.com/#search=getusermedia
+For the other browsers it will depend on which features you are using and which browser specifically.
+
+@rthomas1211
+rthomas1211 commented on Jul 2
+Thank you for creating such great code! I have one question: what would you have to do to save the recorded video to an external platform/source?
+
+@prof3ssorSt3v3
+Owner
+Author
+prof3ssorSt3v3 commented on Jul 2
+Instead of just setting the video.src with the Object URL, set the href of an anchor tag to that value and then adding the download attribute to that anchor tag will let you. save the video locally.
+If you want it on a server then you can use fetch to upload the Blob. This video should help - https://www.youtube.com/watch?v=JtKIcqZdLLM
+
+@rthomas1211
+rthomas1211 commented on Jul 3
+Would it be the same for saving it to a drive such as BOX? If you don't mind would you kindly show an example/demonstration code for this? I have been trying to figure this out for the past few days and still not made much progress. I watched the video, but I am still confused as I am brand new to coding. Ideally, I just need the recorded webcam video to get saved directly to a drive through a button press, so it avoids the user doing much from their side.
+Thank you in advance!
+
+@prof3ssorSt3v3
+Owner
+Author
+prof3ssorSt3v3 commented on Jul 3
+If you were using an online service like OneDrive or Box or Dropbox then you would need to use their API instead of writing your own server-side script to manage the uploaded files. I do not have any tutorials or samples for this.
+
+@Ashish-BITS
+Ashish-BITS commented on Jul 9
+Hi professor Steve, I am a 1st year engineering student, can i please talk to you regarding some help i need in a project of mine?
+
+@prof3ssorSt3v3
+Owner
+Author
+prof3ssorSt3v3 commented on Jul 9
+Hi professor Steve, I am a 1st year engineering student, can i please talk to you regarding some help i need in a project of mine?
+
+Sorry. Not looking for any contract work right now. My schedule is very full.
+
+@Ashish-BITS
+ Ashish-BITS commented on Jul 9
+No sir....I didn't mean contact work....I just want assistance in one topic.
+
+I am working on a project using liveness detection and photo verify.
+
+However , if you are busy I appreciate that as well.
+
+Thank you for your reply.
+…
+@hjaeger19
+hjaeger19 commented on Jul 25
+Hi, thank you for the great code! I'm having an issue where the file that downloads only plays audio (no video) despite being an mp4 file. The video captured is viewable in the browser, but upon downloading, the visual aspect disappears completely. Is there a way to remedy this?
+
+Thanks for the help!
+
+ to join this conversation on GitHub. Already have an account? Sign in to comment
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

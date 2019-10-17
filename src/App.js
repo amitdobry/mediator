@@ -1,10 +1,9 @@
 import React from 'react';
-import { render } from "react-dom";
 import './App.css';
 import MyComponent2 from '../src/components1/component2';
 import MyComponent3 from '../src/components1/component3';
-import {Header} from '../src/components1/Header';
-import {Home} from '../src/components1/Home';
+import  Header  from '../src/components1/Header';
+import  Home  from '../src/components1/Home';
 
 
 
@@ -12,17 +11,14 @@ import {Home} from '../src/components1/Home';
 
 function App() {
   return (
-    <div className="App">
+    <div classname="App">
       <header className="App-header">
 
-        <Header />
-        <Home />
         <MyComponent2 />
-        <MyComponent3 />
+        <Header />
+        
 
-        }
-
-        <a href="C:\Users\user\Desktop\papooo\Mediator papoo page 2.html" class="hover3 center">proceed and Meet Smart Eliezer Papo.</a>
+        {/* <a href="C:\Users\user\Desktop\papooo\Mediator papoo page 2.html" class="hover3 center">proceed and Meet Smart Eliezer Papo.</a>
 
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -34,7 +30,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
